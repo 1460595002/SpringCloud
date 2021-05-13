@@ -1,0 +1,17 @@
+server:
+  port: 1000
+
+
+spring:
+  application:
+    name: provider
+
+eureka:    # 将provider工程注册到eureka
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:5000/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
